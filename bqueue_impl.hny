@@ -3,15 +3,15 @@ from synch import *
 # returns the initial value of an empty queue with at most n elements.
 def BQueue(n) returns init:
   init = {
-    q: [None,] * n,
-    n: n,
-    head: 0,
-    tail: 0,
-    count: 0,
-    lock: Lock(),
-    not_full: Condition(),
-    not_empty: Condition()
-    }
+    .q: [None,] * n,
+    .n: n,
+    .head: 0,
+    .tail: 0,
+    .count: 0,
+    .lock: Lock(),
+    .not_full: Condition(),
+    .not_empty: Condition()
+  }
 
 # bq points to a queue and v is some value. Adds v to the end of the queue.
 # In case the queue is currently full, this operation should block until there is room. 
@@ -41,7 +41,7 @@ def bq_get(bq) returns next:
 
   # remove
   next = bq->q[bq->head]
-  bq->head = (bq->q + 1) % bq->n
+  bq->head = (len(bq->q) + 1) % bq->n
   bq->count -= 1
 
   notify(?bq->not_full)

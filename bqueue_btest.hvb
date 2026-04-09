@@ -1,0 +1,1549 @@
+Issue: Behavior violation: unexpected output
+
+Modules:
+  bqueue: bqueue_impl.hny
+  __main__: bqueue_btest.hny
+  bags: /Users/petrosgeorgiou/.local/lib/python3.13/site-packages/harmony_model_checker/modules/bags.hny
+  synch: /Users/petrosgeorgiou/.local/lib/python3.13/site-packages/harmony_model_checker/modules/synch.hny
+  lists: /Users/petrosgeorgiou/.local/lib/python3.13/site-packages/harmony_model_checker/modules/lists.hny
+
+================================================
+Running thread T0: __init__()
+mode:  runnable atomic
+stack: ['[]']
+state id: 24
+================================================
+
+Step 1:
+  program counter:   0
+  hvm code:          Frame __init__()
+  explanation:       pop argument () and run method "__init__"
+  module:            __main__
+  start statement:   line=16 column=1
+  end statement:     line=56 column=27
+  source code:       import bqueue
+  call trace:        __init__()
+  stack:             [{:}]
+
+Step 2:
+  program counter:   1
+  hvm code:          Jump 491
+  explanation:       jump over method definition: set program counter to 491
+  module:            lists
+  start statement:   line=2 column=1
+  end statement:     line=2 column=35
+  source code:       def subseq(s, b, e) returns result:
+                     ^^^
+
+Step 3:
+  program counter:   491
+  hvm code:          Push PC(494)
+  explanation:       push constant PC(494)
+  module:            bags
+  start statement:   line=15 column=1
+  end statement:     line=15 column=39
+  source code:       builtin multiplicity "bag$multiplicity"
+                             ^^^^^^^^^^^^
+  stack:             [{:}, PC(494)]
+
+Step 4:
+  program counter:   492
+  hvm code:          Builtin(bag$multiplicity)
+  explanation:       pop pc () and bind to built-in method bag$multiplicity
+  source code:       builtin multiplicity "bag$multiplicity"
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 5:
+  program counter:   493
+  hvm code:          Jump 513
+  explanation:       jump over method definition: set program counter to 513
+  start statement:   line=16 column=1
+  end statement:     line=16 column=40
+  source code:       def multiplicity(bg, elt) returns count:
+                     ^^^
+
+Step 6:
+  program counter:   513
+  hvm code:          Push PC(516)
+  explanation:       push constant PC(516)
+  start statement:   line=22 column=1
+  end statement:     line=22 column=23
+  source code:       builtin size "bag$size"
+                             ^^^^
+  stack:             [{:}, PC(516)]
+
+Step 7:
+  program counter:   514
+  hvm code:          Builtin(bag$size)
+  explanation:       pop pc () and bind to built-in method bag$size
+  source code:       builtin size "bag$size"
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 8:
+  program counter:   515
+  hvm code:          Jump 535
+  explanation:       jump over method definition: set program counter to 535
+  start statement:   line=23 column=1
+  end statement:     line=23 column=27
+  source code:       def size(bg) returns count:
+                     ^^^
+
+Step 9:
+  program counter:   535
+  hvm code:          Push PC(538)
+  explanation:       push constant PC(538)
+  start statement:   line=28 column=1
+  end statement:     line=28 column=23
+  source code:       builtin bmin "bag$bmin"
+                             ^^^^
+  stack:             [{:}, PC(538)]
+
+Step 10:
+  program counter:   536
+  hvm code:          Builtin(bag$bmin)
+  explanation:       pop pc () and bind to built-in method bag$bmin
+  source code:       builtin bmin "bag$bmin"
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 11:
+  program counter:   537
+  hvm code:          Jump 554
+  explanation:       jump over method definition: set program counter to 554
+  start statement:   line=29 column=1
+  end statement:     line=29 column=27
+  source code:       def bmin(bg) returns count:
+                     ^^^
+
+Step 12:
+  program counter:   554
+  hvm code:          Push PC(557)
+  explanation:       push constant PC(557)
+  start statement:   line=33 column=1
+  end statement:     line=33 column=23
+  source code:       builtin bmax "bag$bmax"
+                             ^^^^
+  stack:             [{:}, PC(557)]
+
+Step 13:
+  program counter:   555
+  hvm code:          Builtin(bag$bmax)
+  explanation:       pop pc () and bind to built-in method bag$bmax
+  source code:       builtin bmax "bag$bmax"
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 14:
+  program counter:   556
+  hvm code:          Jump 582
+  explanation:       jump over method definition: set program counter to 582
+  start statement:   line=34 column=1
+  end statement:     line=34 column=27
+  source code:       def bmax(bg) returns count:
+                     ^^^
+
+Step 15:
+  program counter:   582
+  hvm code:          Push PC(585)
+  explanation:       push constant PC(585)
+  start statement:   line=41 column=1
+  end statement:     line=41 column=21
+  source code:       builtin add "bag$add"
+                             ^^^
+  stack:             [{:}, PC(585)]
+
+Step 16:
+  program counter:   583
+  hvm code:          Builtin(bag$add)
+  explanation:       pop pc () and bind to built-in method bag$add
+  source code:       builtin add "bag$add"
+                     ^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 17:
+  program counter:   584
+  hvm code:          Jump 611
+  explanation:       jump over method definition: set program counter to 611
+  start statement:   line=42 column=1
+  end statement:     line=42 column=32
+  source code:       def add(bg, elt) returns result:
+                     ^^^
+
+Step 18:
+  program counter:   611
+  hvm code:          Push PC(614)
+  explanation:       push constant PC(614)
+  start statement:   line=49 column=1
+  end statement:     line=49 column=27
+  source code:       builtin remove "bag$remove"
+                             ^^^^^^
+  stack:             [{:}, PC(614)]
+
+Step 19:
+  program counter:   612
+  hvm code:          Builtin(bag$remove)
+  explanation:       pop pc () and bind to built-in method bag$remove
+  source code:       builtin remove "bag$remove"
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}]
+
+Step 20:
+  program counter:   613
+  hvm code:          Jump 1382
+  explanation:       jump over method definition: set program counter to 1382
+  start statement:   line=50 column=1
+  end statement:     line=50 column=35
+  source code:       def remove(bg, elt) returns result:
+                     ^^^
+
+Step 21:
+  program counter:   1382
+  hvm code:          Push PC(1107)
+  explanation:       push program counter constant 1107 ()
+  module:            __main__
+  start statement:   line=24 column=1
+  end statement:     line=24 column=25
+  source code:       myq = bqueue.BQueue(SIZE)
+                           ^^^^^^^^^^^^^
+  stack:             [{:}, PC(1107)]
+
+Step 22:
+  program counter:   1383
+  hvm code:          Push 1
+  explanation:       push constant 1
+  source code:       myq = bqueue.BQueue(SIZE)
+                                         ^^^^
+  stack:             [{:}, PC(1107), 1]
+
+Step 23:
+  program counter:   1384
+  hvm code:          2-ary Closure
+  explanation:       pop 2 values (1, PC(1107)); push result (?PC(1107)[1])
+  source code:       myq = bqueue.BQueue(SIZE)
+                           ^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, ?PC(1107)[1]]
+
+Step 24:
+  program counter:   1385
+  hvm code:          Load
+  explanation:       pop an argument (1) and call method (1107: "BQueue")
+  start expression:  line=24 column=7
+  end expression:    line=24 column=25
+  call trace:        __init__() --> BQueue(1)
+  stack:             [{:}, [], 22162, 1]
+
+Step 25:
+  program counter:   1107
+  hvm code:          Frame BQueue(n)
+  explanation:       pop argument (1), assign to n, and run method "BQueue"
+  module:            bqueue
+  start statement:   line=4 column=1
+  end statement:     line=4 column=27
+  source code:       def BQueue(n) returns init:
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  method variables:  { n: 1 }
+  stack:             [{:}, [], 22162, {:}]
+
+Step 26:
+  program counter:   1108
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  start statement:   line=5 column=3
+  end statement:     line=14 column=3
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}]
+
+Step 27:
+  program counter:   1109
+  hvm code:          Push "q"
+  explanation:       push constant "q"
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q"]
+
+Step 28:
+  program counter:   1110
+  hvm code:          Push ()
+  explanation:       building a tuple: push constant ()
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q", []]
+
+Step 29:
+  program counter:   1111
+  hvm code:          Push None
+  explanation:       push constant None
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q", [], None]
+
+Step 30:
+  program counter:   1112
+  hvm code:          2-ary ListAdd
+  explanation:       pop 2 values (None, []); insert first value into the second; push result ([None])
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q", [ None ]]
+
+Step 31:
+  program counter:   1113
+  hvm code:          LoadVar n
+  explanation:       push value (1) of variable "n"
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q", [ None ], 1]
+
+Step 32:
+  program counter:   1114
+  hvm code:          2-ary *
+  explanation:       pop 2 values (1, [None]); create multiple copies of list; push result ([None])
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, {:}, "q", [ None ]]
+
+Step 33:
+  program counter:   1115
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values ([None], "q", {:}); add key/value pair to dictionary; push result ({ "q": [None] })
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "q": [ None ] }]
+
+Step 34:
+  program counter:   1116
+  hvm code:          Push "n"
+  explanation:       push constant "n"
+  source code:       .n: n,
+  stack:             [{:}, [], 22162, {:}, { "q": [ None ] }, "n"]
+
+Step 35:
+  program counter:   1117
+  hvm code:          LoadVar n
+  explanation:       push value (1) of variable "n"
+  source code:       .n: n,
+  stack:             [{:}, [], 22162, {:}, { "q": [ None ] }, "n", 1]
+
+Step 36:
+  program counter:   1118
+  hvm code:          DelVar n
+  explanation:       delete method variable n
+  start expression:  line=7 column=9
+  end expression:    line=7 column=9
+  method variables:  { }
+
+Step 37:
+  program counter:   1119
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values (1, "n", { "q": [None] }); add key/value pair to dictionary; push result ({ "n": 1, "q": [None] })
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "n": 1, "q": [ None ] }]
+
+Step 38:
+  program counter:   1120
+  hvm code:          Push "head"
+  explanation:       push constant "head"
+  source code:       .head: 0,
+  stack:             [{:}, [], 22162, {:}, { "n": 1, "q": [ None ] }, "head"]
+
+Step 39:
+  program counter:   1121
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       .head: 0,
+  stack:             [{:}, [], 22162, {:}, { "n": 1, "q": [ None ] }, "head", 0]
+
+Step 40:
+  program counter:   1122
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values (0, "head", { "n": 1, "q": [None] }); add key/value pair to dictionary; push result ({ "head": 0, "n": 1, "q": [None] })
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ] }]
+
+Step 41:
+  program counter:   1123
+  hvm code:          Push "tail"
+  explanation:       push constant "tail"
+  source code:       .tail: 0,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ] }, "tail"]
+
+Step 42:
+  program counter:   1124
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       .tail: 0,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ] }, "tail", 0]
+
+Step 43:
+  program counter:   1125
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values (0, "tail", { "head": 0, "n": 1, "q": [None] }); add key/value pair to dictionary; push result ({ "head": 0, "n": 1, "q": [None], "tail": 0 })
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ], "tail": 0 }]
+
+Step 44:
+  program counter:   1126
+  hvm code:          Push "count"
+  explanation:       push constant "count"
+  source code:       .count: 0,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "count"]
+
+Step 45:
+  program counter:   1127
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       .count: 0,
+  stack:             [{:}, [], 22162, {:}, { "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "count", 0]
+
+Step 46:
+  program counter:   1128
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values (0, "count", { "head": 0, "n": 1, "q": [None], "tail": 0 }); add key/value pair to dictionary; push result ({ "count": 0, "head": 0, "n": 1, "q": [None], "tail": 0 })
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }]
+
+Step 47:
+  program counter:   1129
+  hvm code:          Push "lock"
+  explanation:       push constant "lock"
+  source code:       .lock: Lock(),
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock"]
+
+Step 48:
+  program counter:   1130
+  hvm code:          Push ()
+  explanation:       push constant ()
+  source code:       .lock: Lock(),
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", []]
+
+Step 49:
+  program counter:   1131
+  hvm code:          Apply PC(820)
+  explanation:       pop an argument ([]) and call method (820: "Lock")
+  source code:       .lock: Lock(),
+  call trace:        __init__() --> BQueue(1) --> Lock()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", [], 18098, []]
+
+Step 50:
+  program counter:   820
+  hvm code:          Frame Lock()
+  explanation:       pop argument () and run method "Lock"
+  module:            synch
+  start statement:   line=25 column=1
+  end statement:     line=25 column=26
+  source code:       def Lock() returns result:
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", [], 18098, {:}]
+
+Step 51:
+  program counter:   821
+  hvm code:          DelVar result
+  explanation:       delete method variable result
+  start statement:   line=26 column=5
+  end statement:     line=26 column=18
+  source code:       result = False
+                              ^^^^^
+
+Step 52:
+  program counter:   822
+  hvm code:          Push False
+  explanation:       push constant False
+  start expression:  line=26 column=14
+  end expression:    line=26 column=18
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", [], 18098, {:}, False]
+
+Step 53:
+  program counter:   823
+  hvm code:          StoreVar result
+  explanation:       pop value (False) and store locally in variable \"result\"
+  source code:       result = False
+                     ^^^^^^^^
+  method variables:  { result: False }
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", [], 18098, {:}]
+
+Step 54:
+  program counter:   824
+  hvm code:          ReturnOp(result)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=27 column=1
+  end statement:     line=27 column=6
+  source code:       
+                     ^^^^^^
+  method variables:  { }
+  call trace:        __init__() --> BQueue(1)
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "n": 1, "q": [ None ], "tail": 0 }, "lock", False]
+
+Step 55:
+  program counter:   1132
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values (False, "lock", { "count": 0, "head": 0, "n": 1, "q": [None], "tail": 0 }); add key/value pair to dictionary; push result ({ "count": 0, "head": 0, "lock": False, "n": 1, "q": [None], "tail": 0 })
+  module:            bqueue
+  start statement:   line=5 column=3
+  end statement:     line=14 column=3
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }]
+
+Step 56:
+  program counter:   1133
+  hvm code:          Push "not_full"
+  explanation:       push constant "not_full"
+  source code:       .not_full: Condition(),
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full"]
+
+Step 57:
+  program counter:   1134
+  hvm code:          Push ()
+  explanation:       push constant ()
+  source code:       .not_full: Condition(),
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", []]
+
+Step 58:
+  program counter:   1135
+  hvm code:          Apply PC(878)
+  explanation:       pop an argument ([]) and call method (878: "Condition")
+  source code:       .not_full: Condition(),
+  call trace:        __init__() --> BQueue(1) --> Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, []]
+
+Step 59:
+  program counter:   878
+  hvm code:          Frame Condition()
+  explanation:       pop argument () and run method "Condition"
+  module:            synch
+  start statement:   line=43 column=1
+  end statement:     line=43 column=31
+  source code:       def Condition() returns result:
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}]
+
+Step 60:
+  program counter:   879
+  hvm code:          DelVar result
+  explanation:       delete method variable result
+  start statement:   line=44 column=5
+  end statement:     line=44 column=25
+  source code:       result = bags.empty()
+                              ^^^^^^^^^^
+
+Step 61:
+  program counter:   880
+  hvm code:          Push PC(430)
+  explanation:       push program counter constant 430 ()
+  start expression:  line=44 column=14
+  end expression:    line=44 column=23
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, PC(430)]
+
+Step 62:
+  program counter:   881
+  hvm code:          Push ()
+  explanation:       push constant ()
+  source code:       result = bags.empty()
+                                        ^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, PC(430), []]
+
+Step 63:
+  program counter:   882
+  hvm code:          2-ary Closure
+  explanation:       pop 2 values ([], PC(430)); push result (?PC(430)[[]])
+  source code:       result = bags.empty()
+                              ^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, ?PC(430)[[]]]
+
+Step 64:
+  program counter:   883
+  hvm code:          Load
+  explanation:       pop an argument ([]) and call method (430: "empty")
+  start expression:  line=44 column=14
+  end expression:    line=44 column=25
+  call trace:        __init__() --> BQueue(1) --> Condition() --> empty()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, [], 14130, []]
+
+Step 65:
+  program counter:   430
+  hvm code:          Frame empty()
+  explanation:       pop argument () and run method "empty"
+  module:            bags
+  start statement:   line=1 column=1
+  end statement:     line=1 column=23
+  source code:       def empty() returns bg:
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, [], 14130, {:}]
+
+Step 66:
+  program counter:   431
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  start statement:   line=2 column=5
+  end statement:     line=2 column=12
+  source code:       bg = {:}
+                          ^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, [], 14130, {:}, {:}]
+
+Step 67:
+  program counter:   432
+  hvm code:          StoreVar bg
+  explanation:       pop value ({:}) and store locally in variable \"bg\"
+  source code:       bg = {:}
+                     ^^^^
+  method variables:  { bg: {:} }
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, [], 14130, {:}]
+
+Step 68:
+  program counter:   433
+  hvm code:          ReturnOp(bg)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=3 column=1
+  end statement:     line=3 column=6
+  source code:       
+                     ^^^^^^
+  method variables:  { }
+  call trace:        __init__() --> BQueue(1) --> Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}, {:}]
+
+Step 69:
+  program counter:   884
+  hvm code:          StoreVar result
+  explanation:       pop value ({:}) and store locally in variable \"result\"
+  module:            synch
+  start statement:   line=44 column=5
+  end statement:     line=44 column=25
+  source code:       result = bags.empty()
+                     ^^^^^^^^
+  method variables:  { result: {:} }
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", [], 18162, {:}]
+
+Step 70:
+  program counter:   885
+  hvm code:          ReturnOp(result)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=45 column=1
+  end statement:     line=45 column=6
+  source code:       
+                     ^^^^^^
+  method variables:  { }
+  call trace:        __init__() --> BQueue(1)
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "q": [ None ], "tail": 0 }, "not_full", {:}]
+
+Step 71:
+  program counter:   1136
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values ({:}, "not_full", { "count": 0, "head": 0, "lock": False, "n": 1, "q": [None], "tail": 0 }); add key/value pair to dictionary; push result ({ "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [None], "tail": 0 })
+  module:            bqueue
+  start statement:   line=5 column=3
+  end statement:     line=14 column=3
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }]
+
+Step 72:
+  program counter:   1137
+  hvm code:          Push "not_empty"
+  explanation:       push constant "not_empty"
+  source code:       .not_empty: Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty"]
+
+Step 73:
+  program counter:   1138
+  hvm code:          Push ()
+  explanation:       push constant ()
+  source code:       .not_empty: Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", []]
+
+Step 74:
+  program counter:   1139
+  hvm code:          Apply PC(878)
+  explanation:       pop an argument ([]) and call method (878: "Condition")
+  source code:       .not_empty: Condition()
+  call trace:        __init__() --> BQueue(1) --> Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, []]
+
+Step 75:
+  program counter:   878
+  hvm code:          Frame Condition()
+  explanation:       pop argument () and run method "Condition"
+  module:            synch
+  start statement:   line=43 column=1
+  end statement:     line=43 column=31
+  source code:       def Condition() returns result:
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}]
+
+Step 76:
+  program counter:   879
+  hvm code:          DelVar result
+  explanation:       delete method variable result
+  start statement:   line=44 column=5
+  end statement:     line=44 column=25
+  source code:       result = bags.empty()
+                              ^^^^^^^^^^
+
+Step 77:
+  program counter:   880
+  hvm code:          Push PC(430)
+  explanation:       push program counter constant 430 ()
+  start expression:  line=44 column=14
+  end expression:    line=44 column=23
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, PC(430)]
+
+Step 78:
+  program counter:   881
+  hvm code:          Push ()
+  explanation:       push constant ()
+  source code:       result = bags.empty()
+                                        ^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, PC(430), []]
+
+Step 79:
+  program counter:   882
+  hvm code:          2-ary Closure
+  explanation:       pop 2 values ([], PC(430)); push result (?PC(430)[[]])
+  source code:       result = bags.empty()
+                              ^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, ?PC(430)[[]]]
+
+Step 80:
+  program counter:   883
+  hvm code:          Load
+  explanation:       pop an argument ([]) and call method (430: "empty")
+  start expression:  line=44 column=14
+  end expression:    line=44 column=25
+  call trace:        __init__() --> BQueue(1) --> Condition() --> empty()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, [], 14130, []]
+
+Step 81:
+  program counter:   430
+  hvm code:          Frame empty()
+  explanation:       pop argument () and run method "empty"
+  module:            bags
+  start statement:   line=1 column=1
+  end statement:     line=1 column=23
+  source code:       def empty() returns bg:
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, [], 14130, {:}]
+
+Step 82:
+  program counter:   431
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  start statement:   line=2 column=5
+  end statement:     line=2 column=12
+  source code:       bg = {:}
+                          ^^^
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, [], 14130, {:}, {:}]
+
+Step 83:
+  program counter:   432
+  hvm code:          StoreVar bg
+  explanation:       pop value ({:}) and store locally in variable \"bg\"
+  source code:       bg = {:}
+                     ^^^^
+  method variables:  { bg: {:} }
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, [], 14130, {:}]
+
+Step 84:
+  program counter:   433
+  hvm code:          ReturnOp(bg)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=3 column=1
+  end statement:     line=3 column=6
+  source code:       
+                     ^^^^^^
+  method variables:  { }
+  call trace:        __init__() --> BQueue(1) --> Condition()
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}, {:}]
+
+Step 85:
+  program counter:   884
+  hvm code:          StoreVar result
+  explanation:       pop value ({:}) and store locally in variable \"result\"
+  module:            synch
+  start statement:   line=44 column=5
+  end statement:     line=44 column=25
+  source code:       result = bags.empty()
+                     ^^^^^^^^
+  method variables:  { result: {:} }
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", [], 18226, {:}]
+
+Step 86:
+  program counter:   885
+  hvm code:          ReturnOp(result)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=45 column=1
+  end statement:     line=45 column=6
+  source code:       
+                     ^^^^^^
+  method variables:  { }
+  call trace:        __init__() --> BQueue(1)
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [ None ], "tail": 0 }, "not_empty", {:}]
+
+Step 87:
+  program counter:   1140
+  hvm code:          3-ary DictAdd
+  explanation:       pop 3 values ({:}, "not_empty", { "count": 0, "head": 0, "lock": False, "n": 1, "not_full": {:}, "q": [None], "tail": 0 }); add key/value pair to dictionary; push result ({ "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [None], "tail": 0 })
+  module:            bqueue
+  start statement:   line=5 column=3
+  end statement:     line=14 column=3
+  source code:       .q: [None,] * n,
+  stack:             [{:}, [], 22162, {:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 }]
+
+Step 88:
+  program counter:   1141
+  hvm code:          StoreVar init
+  explanation:       pop value ({ "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [None], "tail": 0 }) and store locally in variable \"init\"
+  source code:       init = {
+  method variables:  { init: { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 } }
+  stack:             [{:}, [], 22162, {:}]
+
+Step 89:
+  program counter:   1142
+  hvm code:          ReturnOp(init)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start statement:   line=18 column=27
+  end statement:     line=18 column=32
+  source code:       # Does not return a value.
+                                               ^^^^^^
+  method variables:  { }
+  call trace:        __init__()
+  stack:             [{:}, { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 }]
+
+Step 90:
+  program counter:   1386
+  hvm code:          Store myq
+  explanation:       pop value ({ "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [None], "tail": 0 }) and store into variable myq
+  module:            __main__
+  start statement:   line=24 column=1
+  end statement:     line=24 column=25
+  source code:       myq = bqueue.BQueue(SIZE)
+                     ^^^^^
+  shared variables:  { myq: { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 } }
+  stack:             [{:}]
+
+Step 91:
+  program counter:   1387
+  hvm code:          Jump 1515
+  explanation:       jump over method definition: set program counter to 1515
+  start statement:   line=26 column=1
+  end statement:     line=26 column=19
+  source code:       def put_test(self):
+                     ^^^
+
+Step 92:
+  program counter:   1515
+  hvm code:          Push 1
+  explanation:       push constant 1
+  start statement:   line=49 column=1
+  end statement:     line=49 column=18
+  source code:       for i in {1..NPUT}:
+                               ^
+  stack:             [{:}, 1]
+
+Step 93:
+  program counter:   1516
+  hvm code:          Push 1
+  explanation:       push constant 1
+  source code:       for i in {1..NPUT}:
+                                  ^^^^
+  stack:             [{:}, 1, 1]
+
+Step 94:
+  program counter:   1517
+  hvm code:          2-ary ..
+  explanation:       pop 2 values (1, 1); range of integers; push result ({ 1 })
+  source code:       for i in {1..NPUT}:
+                               ^^^^^^^
+  stack:             [{:}, { 1 }]
+
+Step 95:
+  program counter:   1518
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       for i in {1..NPUT}:
+                     ^^^
+  stack:             [{:}, { 1 }, 0]
+
+Step 96:
+  program counter:   1519
+  hvm code:          Cut(i)
+  explanation:       pop index (0) and value ({ 1 }); assign value (1) to i; push new index (1) and True
+  start expression:  line=49 column=1
+  end expression:    line=49 column=3
+  method variables:  { i: 1 }
+  stack:             [{:}, { 1 }, 1, True]
+
+Step 97:
+  program counter:   1520
+  hvm code:          JumpCond False 1528
+  explanation:       pop value (True), compare to False, and jump to 1528 if the same
+  start expression:  line=49 column=1
+  end expression:    line=49 column=3
+  stack:             [{:}, { 1 }, 1]
+
+Step 98:
+  program counter:   1521
+  hvm code:          Push ?PC(1388)
+  explanation:       push constant ?PC(1388)
+  start statement:   line=50 column=3
+  end statement:     line=50 column=19
+  source code:       spawn put_test(i)
+                           ^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1388)]
+
+Step 99:
+  program counter:   1522
+  hvm code:          LoadVar i
+  explanation:       push value (1) of variable "i"
+  source code:       spawn put_test(i)
+                                    ^
+  stack:             [{:}, { 1 }, 1, ?PC(1388), 1]
+
+Step 100:
+  program counter:   1523
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start expression:  line=50 column=18
+  end expression:    line=50 column=18
+  method variables:  { }
+
+Step 101:
+  program counter:   1524
+  hvm code:          2-ary AddArg
+  explanation:       pop 2 values (1, ?PC(1388)); push result (?PC(1388)[1])
+  source code:       spawn put_test(i)
+                           ^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1388)[1]]
+
+Step 102:
+  program counter:   1525
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  source code:       spawn put_test(i)
+                     ^^^^^^^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1388)[1], {:}]
+
+Step 103:
+  program counter:   1526
+  hvm code:          Spawn
+  explanation:       pop local state ({:}), arg (1), and pc (1388: "put_test"), and spawn thread
+  start expression:  line=50 column=3
+  end expression:    line=50 column=19
+  stack:             [{:}, { 1 }, 1]
+
+Step 104:
+  program counter:   1527
+  hvm code:          Jump 1519
+  explanation:       set program counter to 1519
+  start statement:   line=49 column=1
+  end statement:     line=49 column=18
+  source code:       for i in {1..NPUT}:
+                                      ^
+
+Step 105:
+  program counter:   1519
+  hvm code:          Cut(i)
+  explanation:       pop index (1) and value ({ 1 }); out of range -> push False
+  source code:       for i in {1..NPUT}:
+                     ^^^
+  stack:             [{:}, False]
+
+Step 106:
+  program counter:   1520
+  hvm code:          JumpCond False 1528
+  explanation:       pop value (False), compare to False, and jump to 1528 if the same
+  start expression:  line=49 column=1
+  end expression:    line=49 column=3
+  stack:             [{:}]
+
+Step 107:
+  program counter:   1528
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start statement:   line=51 column=1
+  end statement:     line=51 column=18
+  source code:       for i in {1..NGET}:
+                               ^
+
+Step 108:
+  program counter:   1529
+  hvm code:          Push 1
+  explanation:       push constant 1
+  start expression:  line=51 column=11
+  end expression:    line=51 column=11
+  stack:             [{:}, 1]
+
+Step 109:
+  program counter:   1530
+  hvm code:          Push 2
+  explanation:       push constant 2
+  source code:       for i in {1..NGET}:
+                                  ^^^^
+  stack:             [{:}, 1, 2]
+
+Step 110:
+  program counter:   1531
+  hvm code:          2-ary ..
+  explanation:       pop 2 values (2, 1); range of integers; push result ({ 1, 2 })
+  source code:       for i in {1..NGET}:
+                               ^^^^^^^
+  stack:             [{:}, { 1, 2 }]
+
+Step 111:
+  program counter:   1532
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       for i in {1..NGET}:
+                     ^^^
+  stack:             [{:}, { 1, 2 }, 0]
+
+Step 112:
+  program counter:   1533
+  hvm code:          Cut(i)
+  explanation:       pop index (0) and value ({ 1, 2 }); assign value (1) to i; push new index (1) and True
+  start expression:  line=51 column=1
+  end expression:    line=51 column=3
+  method variables:  { i: 1 }
+  stack:             [{:}, { 1, 2 }, 1, True]
+
+Step 113:
+  program counter:   1534
+  hvm code:          JumpCond False 1542
+  explanation:       pop value (True), compare to False, and jump to 1542 if the same
+  start expression:  line=51 column=1
+  end expression:    line=51 column=3
+  stack:             [{:}, { 1, 2 }, 1]
+
+Step 114:
+  program counter:   1535
+  hvm code:          Push ?PC(1425)
+  explanation:       push constant ?PC(1425)
+  start statement:   line=52 column=3
+  end statement:     line=52 column=19
+  source code:       spawn get_test(i)
+                           ^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 1, ?PC(1425)]
+
+Step 115:
+  program counter:   1536
+  hvm code:          LoadVar i
+  explanation:       push value (1) of variable "i"
+  source code:       spawn get_test(i)
+                                    ^
+  stack:             [{:}, { 1, 2 }, 1, ?PC(1425), 1]
+
+Step 116:
+  program counter:   1537
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start expression:  line=52 column=18
+  end expression:    line=52 column=18
+  method variables:  { }
+
+Step 117:
+  program counter:   1538
+  hvm code:          2-ary AddArg
+  explanation:       pop 2 values (1, ?PC(1425)); push result (?PC(1425)[1])
+  source code:       spawn get_test(i)
+                           ^^^^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 1, ?PC(1425)[1]]
+
+Step 118:
+  program counter:   1539
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  source code:       spawn get_test(i)
+                     ^^^^^^^^^^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 1, ?PC(1425)[1], {:}]
+
+Step 119:
+  program counter:   1540
+  hvm code:          Spawn
+  explanation:       pop local state ({:}), arg (1), and pc (1425: "get_test"), and spawn thread
+  start expression:  line=52 column=3
+  end expression:    line=52 column=19
+  stack:             [{:}, { 1, 2 }, 1]
+
+Step 120:
+  program counter:   1541
+  hvm code:          Jump 1533
+  explanation:       set program counter to 1533
+  start statement:   line=51 column=1
+  end statement:     line=51 column=18
+  source code:       for i in {1..NGET}:
+                                      ^
+
+Step 121:
+  program counter:   1533
+  hvm code:          Cut(i)
+  explanation:       pop index (1) and value ({ 1, 2 }); assign value (2) to i; push new index (2) and True
+  source code:       for i in {1..NGET}:
+                     ^^^
+  method variables:  { i: 2 }
+  stack:             [{:}, { 1, 2 }, 2, True]
+
+Step 122:
+  program counter:   1534
+  hvm code:          JumpCond False 1542
+  explanation:       pop value (True), compare to False, and jump to 1542 if the same
+  start expression:  line=51 column=1
+  end expression:    line=51 column=3
+  stack:             [{:}, { 1, 2 }, 2]
+
+Step 123:
+  program counter:   1535
+  hvm code:          Push ?PC(1425)
+  explanation:       push constant ?PC(1425)
+  start statement:   line=52 column=3
+  end statement:     line=52 column=19
+  source code:       spawn get_test(i)
+                           ^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 2, ?PC(1425)]
+
+Step 124:
+  program counter:   1536
+  hvm code:          LoadVar i
+  explanation:       push value (2) of variable "i"
+  source code:       spawn get_test(i)
+                                    ^
+  stack:             [{:}, { 1, 2 }, 2, ?PC(1425), 2]
+
+Step 125:
+  program counter:   1537
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start expression:  line=52 column=18
+  end expression:    line=52 column=18
+  method variables:  { }
+
+Step 126:
+  program counter:   1538
+  hvm code:          2-ary AddArg
+  explanation:       pop 2 values (2, ?PC(1425)); push result (?PC(1425)[2])
+  source code:       spawn get_test(i)
+                           ^^^^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 2, ?PC(1425)[2]]
+
+Step 127:
+  program counter:   1539
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  source code:       spawn get_test(i)
+                     ^^^^^^^^^^^^^^^^^
+  stack:             [{:}, { 1, 2 }, 2, ?PC(1425)[2], {:}]
+
+Step 128:
+  program counter:   1540
+  hvm code:          Spawn
+  explanation:       pop local state ({:}), arg (2), and pc (1425: "get_test"), and spawn thread
+  start expression:  line=52 column=3
+  end expression:    line=52 column=19
+  stack:             [{:}, { 1, 2 }, 2]
+
+Step 129:
+  program counter:   1541
+  hvm code:          Jump 1533
+  explanation:       set program counter to 1533
+  start statement:   line=51 column=1
+  end statement:     line=51 column=18
+  source code:       for i in {1..NGET}:
+                                      ^
+
+Step 130:
+  program counter:   1533
+  hvm code:          Cut(i)
+  explanation:       pop index (2) and value ({ 1, 2 }); out of range -> push False
+  source code:       for i in {1..NGET}:
+                     ^^^
+  stack:             [{:}, False]
+
+Step 131:
+  program counter:   1534
+  hvm code:          JumpCond False 1542
+  explanation:       pop value (False), compare to False, and jump to 1542 if the same
+  start expression:  line=51 column=1
+  end expression:    line=51 column=3
+  stack:             [{:}]
+
+Step 132:
+  program counter:   1542
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start statement:   line=53 column=1
+  end statement:     line=53 column=21
+  source code:       for i in {1 .. NPEEK}:
+                               ^
+
+Step 133:
+  program counter:   1543
+  hvm code:          Push 1
+  explanation:       push constant 1
+  start expression:  line=53 column=11
+  end expression:    line=53 column=11
+  stack:             [{:}, 1]
+
+Step 134:
+  program counter:   1544
+  hvm code:          Push 1
+  explanation:       push constant 1
+  source code:       for i in {1 .. NPEEK}:
+                                    ^^^^^
+  stack:             [{:}, 1, 1]
+
+Step 135:
+  program counter:   1545
+  hvm code:          2-ary ..
+  explanation:       pop 2 values (1, 1); range of integers; push result ({ 1 })
+  source code:       for i in {1 .. NPEEK}:
+                               ^^^^^^^^^^
+  stack:             [{:}, { 1 }]
+
+Step 136:
+  program counter:   1546
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       for i in {1 .. NPEEK}:
+                     ^^^
+  stack:             [{:}, { 1 }, 0]
+
+Step 137:
+  program counter:   1547
+  hvm code:          Cut(i)
+  explanation:       pop index (0) and value ({ 1 }); assign value (1) to i; push new index (1) and True
+  start expression:  line=53 column=1
+  end expression:    line=53 column=3
+  method variables:  { i: 1 }
+  stack:             [{:}, { 1 }, 1, True]
+
+Step 138:
+  program counter:   1548
+  hvm code:          JumpCond False 1556
+  explanation:       pop value (True), compare to False, and jump to 1556 if the same
+  start expression:  line=53 column=1
+  end expression:    line=53 column=3
+  stack:             [{:}, { 1 }, 1]
+
+Step 139:
+  program counter:   1549
+  hvm code:          Push ?PC(1459)
+  explanation:       push constant ?PC(1459)
+  start statement:   line=54 column=3
+  end statement:     line=54 column=20
+  source code:       spawn peek_test(i)
+                           ^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1459)]
+
+Step 140:
+  program counter:   1550
+  hvm code:          LoadVar i
+  explanation:       push value (1) of variable "i"
+  source code:       spawn peek_test(i)
+                                     ^
+  stack:             [{:}, { 1 }, 1, ?PC(1459), 1]
+
+Step 141:
+  program counter:   1551
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start expression:  line=54 column=19
+  end expression:    line=54 column=19
+  method variables:  { }
+
+Step 142:
+  program counter:   1552
+  hvm code:          2-ary AddArg
+  explanation:       pop 2 values (1, ?PC(1459)); push result (?PC(1459)[1])
+  source code:       spawn peek_test(i)
+                           ^^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1459)[1]]
+
+Step 143:
+  program counter:   1553
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  source code:       spawn peek_test(i)
+                     ^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1459)[1], {:}]
+
+Step 144:
+  program counter:   1554
+  hvm code:          Spawn
+  explanation:       pop local state ({:}), arg (1), and pc (1459: "peek_test"), and spawn thread
+  start expression:  line=54 column=3
+  end expression:    line=54 column=20
+  stack:             [{:}, { 1 }, 1]
+
+Step 145:
+  program counter:   1555
+  hvm code:          Jump 1547
+  explanation:       set program counter to 1547
+  start statement:   line=53 column=1
+  end statement:     line=53 column=21
+  source code:       for i in {1 .. NPEEK}:
+                                         ^
+
+Step 146:
+  program counter:   1547
+  hvm code:          Cut(i)
+  explanation:       pop index (1) and value ({ 1 }); out of range -> push False
+  source code:       for i in {1 .. NPEEK}:
+                     ^^^
+  stack:             [{:}, False]
+
+Step 147:
+  program counter:   1548
+  hvm code:          JumpCond False 1556
+  explanation:       pop value (False), compare to False, and jump to 1556 if the same
+  start expression:  line=53 column=1
+  end expression:    line=53 column=3
+  stack:             [{:}]
+
+Step 148:
+  program counter:   1556
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start statement:   line=55 column=1
+  end statement:     line=55 column=22
+  source code:       for i in {1 .. NCLEAR}:
+                               ^
+
+Step 149:
+  program counter:   1557
+  hvm code:          Push 1
+  explanation:       push constant 1
+  start expression:  line=55 column=11
+  end expression:    line=55 column=11
+  stack:             [{:}, 1]
+
+Step 150:
+  program counter:   1558
+  hvm code:          Push 1
+  explanation:       push constant 1
+  source code:       for i in {1 .. NCLEAR}:
+                                    ^^^^^^
+  stack:             [{:}, 1, 1]
+
+Step 151:
+  program counter:   1559
+  hvm code:          2-ary ..
+  explanation:       pop 2 values (1, 1); range of integers; push result ({ 1 })
+  source code:       for i in {1 .. NCLEAR}:
+                               ^^^^^^^^^^^
+  stack:             [{:}, { 1 }]
+
+Step 152:
+  program counter:   1560
+  hvm code:          Push 0
+  explanation:       push constant 0
+  source code:       for i in {1 .. NCLEAR}:
+                     ^^^
+  stack:             [{:}, { 1 }, 0]
+
+Step 153:
+  program counter:   1561
+  hvm code:          Cut(i)
+  explanation:       pop index (0) and value ({ 1 }); assign value (1) to i; push new index (1) and True
+  start expression:  line=55 column=1
+  end expression:    line=55 column=3
+  method variables:  { i: 1 }
+  stack:             [{:}, { 1 }, 1, True]
+
+Step 154:
+  program counter:   1562
+  hvm code:          JumpCond False 1570
+  explanation:       pop value (True), compare to False, and jump to 1570 if the same
+  start expression:  line=55 column=1
+  end expression:    line=55 column=3
+  stack:             [{:}, { 1 }, 1]
+
+Step 155:
+  program counter:   1563
+  hvm code:          Push ?PC(1493)
+  explanation:       push constant ?PC(1493)
+  start statement:   line=56 column=3
+  end statement:     line=56 column=21
+  source code:       spawn clear_test(i)
+                           ^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1493)]
+
+Step 156:
+  program counter:   1564
+  hvm code:          LoadVar i
+  explanation:       push value (1) of variable "i"
+  source code:       spawn clear_test(i)
+                                      ^
+  stack:             [{:}, { 1 }, 1, ?PC(1493), 1]
+
+Step 157:
+  program counter:   1565
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start expression:  line=56 column=20
+  end expression:    line=56 column=20
+  method variables:  { }
+
+Step 158:
+  program counter:   1566
+  hvm code:          2-ary AddArg
+  explanation:       pop 2 values (1, ?PC(1493)); push result (?PC(1493)[1])
+  source code:       spawn clear_test(i)
+                           ^^^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1493)[1]]
+
+Step 159:
+  program counter:   1567
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  source code:       spawn clear_test(i)
+                     ^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, { 1 }, 1, ?PC(1493)[1], {:}]
+
+Step 160:
+  program counter:   1568
+  hvm code:          Spawn
+  explanation:       pop local state ({:}), arg (1), and pc (1493: "clear_test"), and spawn thread
+  start expression:  line=56 column=3
+  end expression:    line=56 column=21
+  stack:             [{:}, { 1 }, 1]
+
+Step 161:
+  program counter:   1569
+  hvm code:          Jump 1561
+  explanation:       set program counter to 1561
+  start statement:   line=55 column=1
+  end statement:     line=55 column=22
+  source code:       for i in {1 .. NCLEAR}:
+                                          ^
+
+Step 162:
+  program counter:   1561
+  hvm code:          Cut(i)
+  explanation:       pop index (1) and value ({ 1 }); out of range -> push False
+  source code:       for i in {1 .. NCLEAR}:
+                     ^^^
+  stack:             [{:}, False]
+
+Step 163:
+  program counter:   1562
+  hvm code:          JumpCond False 1570
+  explanation:       pop value (False), compare to False, and jump to 1570 if the same
+  start expression:  line=55 column=1
+  end expression:    line=55 column=3
+  stack:             [{:}]
+
+Step 164:
+  program counter:   1570
+  hvm code:          DelVar i
+  explanation:       delete method variable i
+  start statement:   line=56 column=27
+  end statement:     line=56 column=27
+  source code:       spawn clear_test(i)
+                                             ^
+
+Step 165:
+  program counter:   1571
+  hvm code:          ReturnOp(result. None)
+  explanation:       pop caller's method variables and pc and push result (), or terminate if no caller
+  start expression:  line=56 column=27
+  end expression:    line=56 column=27
+  new mode:          terminated
+  stack:             [None]
+
+================================================
+Running thread T5: clear_test(1)
+mode:  runnable
+stack: ['1']
+other threads:
+  T0: pc=1571 terminated atomic __init__()
+  T1: pc=1388 runnable put_test(1)
+    about to run method put_test with argument 1
+  T2: pc=1425 runnable get_test(1)
+    about to run method get_test with argument 1
+  T3: pc=1425 runnable get_test(2)
+    about to run method get_test with argument 2
+  T4: pc=1459 runnable peek_test(1)
+    about to run method peek_test with argument 1
+shared variables:
+  myq: { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 }
+state id: 25
+================================================
+
+Step 166:
+  program counter:   1493
+  hvm code:          Frame clear_test(self)
+  explanation:       pop argument (1), assign to self, and run method "clear_test"
+  start statement:   line=44 column=1
+  end statement:     line=44 column=21
+  source code:       def clear_test(self):
+                     ^^^^^^^^^^^^^^^^^^^^^
+  method variables:  { self: 1 }
+  call trace:        clear_test(1)
+  stack:             [{:}]
+
+Step 167:
+  program counter:   1494
+  hvm code:          Push {:}
+  explanation:       push constant {:}
+  start statement:   line=45 column=3
+  end statement:     line=45 column=27
+  source code:       print("call clear", self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, {:}]
+
+Step 168:
+  program counter:   1495
+  hvm code:          Push ()
+  explanation:       building a tuple: push constant ()
+  source code:       print("call clear", self)
+                           ^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, {:}, []]
+
+Step 169:
+  program counter:   1496
+  hvm code:          Push "call clear"
+  explanation:       push constant "call clear"
+  source code:       print("call clear", self)
+                           ^^^^^^^^^^^^
+  stack:             [{:}, {:}, [], "call clear"]
+
+Step 170:
+  program counter:   1497
+  hvm code:          2-ary ListAdd
+  explanation:       pop 2 values ("call clear", []); insert first value into the second; push result (["call clear"])
+  source code:       print("call clear", self)
+                           ^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, {:}, [ "call clear" ]]
+
+Step 171:
+  program counter:   1498
+  hvm code:          LoadVar self
+  explanation:       push value (1) of variable "self"
+  source code:       print("call clear", self)
+                                         ^^^^
+  stack:             [{:}, {:}, [ "call clear" ], 1]
+
+Step 172:
+  program counter:   1499
+  hvm code:          2-ary ListAdd
+  explanation:       pop 2 values (1, ["call clear"]); insert first value into the second; push result (["call clear", 1])
+  source code:       print("call clear", self)
+                           ^^^^^^^^^^^^^^^^^^
+  stack:             [{:}, {:}, [ "call clear", 1 ]]
+
+Step 173:
+  program counter:   1500
+  hvm code:          Print
+  explanation:       pop value (["call clear", 1]) and attributes ({:}) and add to print log
+  source code:       print("call clear", self)
+                     ^^^^^
+  call trace:        clear_test(1)
+  new mode:          failed
+  stack:             [{:}]
+  operation failed:  Behavior failure on printing ["call clear", 1]
+
+================================================
+Final state
+================================================
+Threads:
+  T0: pc=1571 terminated atomic __init__()
+  T1: pc=1388 runnable put_test(1)
+    about to run method put_test with argument 1
+  T2: pc=1425 runnable get_test(1)
+    about to run method get_test with argument 1
+  T3: pc=1425 runnable get_test(2)
+    about to run method get_test with argument 2
+  T4: pc=1459 runnable peek_test(1)
+    about to run method peek_test with argument 1
+  T5: pc=1500 failed clear_test(1)
+Variables:
+  myq: { "count": 0, "head": 0, "lock": False, "n": 1, "not_empty": {:}, "not_full": {:}, "q": [ None ], "tail": 0 }

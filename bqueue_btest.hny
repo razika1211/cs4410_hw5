@@ -8,10 +8,10 @@
 
 # myq = bqueue.BQueue(SIZE)
 
-# bqueue.bq put(?myq, 1)
-# let v = bqueue.bq peek(?myq): assert v == 1
-# let v = bqueue.bq get(?myq): assert v == 1
-# bqueue.bq clear(?myq)
+# bqueue.bq_put(?myq, 1)
+# let v = bqueue.bq_peek(?myq): assert v == 1
+# let v = bqueue.bq_get(?myq): assert v == 1
+# bqueue.bq_clear(?myq)
 
 import bqueue
 
@@ -29,26 +29,26 @@ def put_test(self):
     bqueue.bq_put(?myq, v)
     print("done put", self, v)
 
-def get_test():
+def get_test(self):
   print("call get", self)
   let r = bqueue.bq_get(?myq):
     assert r != None
-  print("done get", self, r)
+    print("done get", self, r)
 
 def peek_test(self):
   print("call peek", self)
   let r = bqueue.bq_peek(?myq):
     assert r != None   # non-empty, peek must return something
-  print("done peek", self, r)
+    print("done peek", self, r)
 
 def clear_test(self):
   print("call clear", self)
   bqueue.bq_clear(?myq)
   print("done clear", self)
 
-for i in {1..N_PUT}:
+for i in {1..NPUT}:
   spawn put_test(i)
-for i in {1..N_GET}:
+for i in {1..NGET}:
   spawn get_test(i)
 for i in {1 .. NPEEK}:
   spawn peek_test(i)
