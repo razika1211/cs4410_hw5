@@ -1,0 +1,77 @@
+from synch import *
+
+# returns the initial value of an empty queue with at most n elements.
+def BQueue(n) returns init:
+  init = {
+    q: [None,] * n,
+    n: n,
+    head: 0,
+    tail: 0,
+    count: 0,
+    lock: Lock(),
+    not_full: Condition(),
+    not_empty: Condition()
+    }
+
+# bq points to a queue and v is some value. Adds v to the end of the queue.
+# In case the queue is currently full, this operation should block until there is room. 
+# Does not return a value.
+def bq_put(bq, v):
+  acquire(?bq->lock)
+  
+  while bq->count == bq->n:
+    wait(?bq->not_full, ?bq->lock)
+
+  bq->q[bq->tail] = v
+  bq->tail = (bq->tail + 1) % bq->n
+  bq->count += 1
+
+  # wake just one
+  notify(?bq->not_empty)
+
+  release(?bq->lock)
+
+# Waits until the queue pointed to by bq is non-empty, returns the first element on
+# the queue, which it should remove from the queue.
+def bq_get(bq) returns next: 
+  acquire(?bq->lock)
+
+  while bq->count == 0:
+    wait(?bq->not_empty, ?bq->lock)
+
+  # remove
+  next = bq->q[bq->head]
+  bq->head = (bq->q + 1) % bq->n
+  bq->count -= 1
+
+  notify(?bq->not_full)
+
+  release(?bq->lock)
+    
+
+# Like bq get(), except that it does not remove the element from the queue.
+def bq_peek(bq) returns next:
+  acquire(?bq->lock)
+
+  while bq->count == 0:
+      wait(?bq->not_empty, ?bq->lock)
+
+  next = bq->q[bq->head]
+
+  release(?bq->lock)
+    
+
+# Empty out the entire queue.
+def bq_clear(bq):
+  acquire(?bq->lock)
+
+  # reset state
+  bq->q = [None,] * bq->n
+  bq->head = 0
+  bq->tail = 0
+  bq->count = 0
+
+  # notify all, not full
+  notifyAll(?bq->not_full)
+
+  release(?bq->lock)

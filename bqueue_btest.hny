@@ -1,0 +1,56 @@
+# import bqueue
+
+# const SIZE = 1
+# const NPUT = 1
+# const NGET = 1
+# const NPEEK = 1
+# const NCLEAR = 1
+
+# myq = bqueue.BQueue(SIZE)
+
+# bqueue.bq put(?myq, 1)
+# let v = bqueue.bq peek(?myq): assert v == 1
+# let v = bqueue.bq get(?myq): assert v == 1
+# bqueue.bq clear(?myq)
+
+import bqueue
+
+const SIZE  = 2
+const NPUT  = 2
+const NGET  = 2
+const NPEEK = 1
+const NCLEAR = 0
+
+myq = bqueue.BQueue(SIZE)
+
+def put_test(self):
+  let v = choose {0 .. 5}:
+    print("call put", self, v)
+    bqueue.bq_put(?myq, v)
+    print("done put", self, v)
+
+def get_test():
+  print("call get", self)
+  let r = bqueue.bq_get(?myq):
+    assert r != None
+  print("done get", self, r)
+
+def peek_test(self):
+  print("call peek", self)
+  let r = bqueue.bq_peek(?myq):
+    assert r != None   # non-empty, peek must return something
+  print("done peek", self, r)
+
+def clear_test(self):
+  print("call clear", self)
+  bqueue.bq_clear(?myq)
+  print("done clear", self)
+
+for i in {1..N_PUT}:
+  spawn put_test(i)
+for i in {1..N_GET}:
+  spawn get_test(i)
+for i in {1 .. NPEEK}:
+  spawn peek_test(i)
+for i in {1 .. NCLEAR}:
+  spawn clear_test(i)

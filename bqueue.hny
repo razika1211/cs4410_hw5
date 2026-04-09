@@ -1,0 +1,29 @@
+
+# returns the initial value of an empty queue with at most n elements.
+def BQueue(n) returns init:
+  init = { .q: [], .n: n }
+
+
+# bq points to a queue and v is some value. Adds v to the end of the queue.
+# In case the queue is currently full, this operation should block until there is room. 
+# Does not return a value.
+def bq_put(bq, v):
+  atomically when len(bq->q) < (bq->n):
+    bq->q = q + [v,]
+
+# Waits until the queue pointed to by bq is non-empty, returns the first element on
+# the queue, which it should remove from the queue.
+def bq_get(bq) returns next: 
+  atomically when (bq->q) != []:
+    next = bb->q[0]
+    del bb->q[0] 
+
+# Like bq get(), except that it does not remove the element from the queue.
+def bq_peek(bq) returns next:
+  atomically when (bq->q) != []:
+    next = bb->q[0]
+
+# Empty out the entire queue.
+def bq_clear(bq):
+  atomically:
+    !bq->q = []
